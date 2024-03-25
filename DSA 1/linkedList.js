@@ -56,11 +56,13 @@ const node=new Node(value)
 
  insert(value,index){
 
-    if(index<0 || index>this.size){
-        console.log('not valid index');
-        return
+    // if(index<0 || index>this.size){
+    //     console.log('not valid index');
+    //     return
         
-    }
+    // }
+
+
   if(index===0){
      
     this.prepend(value)
@@ -93,7 +95,7 @@ const node=new Node(value)
     let prev=this.head
 
    for(let i=0;i<index-1;i++){
-    prev=prev.next
+       prev=prev.next
 
    }
 
@@ -142,9 +144,8 @@ const node=new Node(value)
 search(value){
 
   if(this.isEmpty()){
- console.log('the List is empty');
+    console.log('the List is empty');
     return -1
-
   }
 
   let curr=this.head

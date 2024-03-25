@@ -1,4 +1,4 @@
-class Node{
+class Node{ 
     constructor(value){
         this.value=value
         this.left=null
@@ -49,7 +49,7 @@ class BinarySearchTree {
         return true;
       } else if (value < root.value) {
         return this.search(root.left, value);
-      } else {
+      } else {  
         return this.search(root.right, value);
       }
     }
@@ -86,7 +86,6 @@ class BinarySearchTree {
 
     while (queue.length) {
       let curr = queue.shift();
-
       console.log(curr.value);
 
       if (curr.left) {

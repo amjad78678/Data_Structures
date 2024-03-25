@@ -59,6 +59,7 @@ class Trie {
       words.push(word);
     }
     for (let child in curr.children) {
+      console.log('iam child',child)
       this.collection(curr.children[child], word + child, words);
     }
   }
@@ -96,7 +97,7 @@ tries.insert('rithu')
 tries.insert("apple");
 tries.insert('appledata');
 tries.insert('applemon');
-
 tries.delete('apple')
-
 console.log(tries.searchPrefix('rith'));
+
+

@@ -21,7 +21,6 @@ class Graph {
     this.adjacencyList[vertex2].add(vertex1);
   }
   hasEdge(vertex1, vertex2) {
-    // Check if the vertices exist in the graph
     if (!this.adjacencyList[vertex1] || !this.adjacencyList[vertex2]) {
       return false;
     }
@@ -67,7 +66,7 @@ class Graph {
 
     while (queue.length > 0) {
       const vertex = queue.shift();
-      console.log(vertex);
+               console.log(vertex);
 
       for (let neighbor of this.adjacencyList[vertex]) {
         if (!visited[neighbor]) {
@@ -118,7 +117,9 @@ class Graph {
 for(let vertex of allValues){
    
   if(!visited[vertex]){
+
     dfsHelper(vertex)
+    
   }
 }
 
@@ -144,6 +145,8 @@ graph.addEdge(5,20);
 graph.addEdge(10,20);
 
 graph.bfs(10)
+
+graph.dfs(55)
 
 
 

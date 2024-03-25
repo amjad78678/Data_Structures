@@ -1,7 +1,7 @@
 function mergeSort(arr) {
   //base case
 
-  if (arr.length < 2) {
+  if (arr.length <= 1) {
     return arr;
   }
 

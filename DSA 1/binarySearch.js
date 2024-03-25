@@ -44,7 +44,7 @@ let mid=0
 
    }
 
-   console.log(binary([2,32,3,432,2,332,3,43,445,65],3))
+console.log(binary([2,32,3,432,2,332,3,43,445,65],3))
 
 
 function binary(arr,target){
@@ -80,40 +80,40 @@ console.log(arr)
 console.log(binary([2,32,3,432,2,332,3,43,445,65],432))
 
 
-function binaryLastOccurrence(arr, target) {
-    if (arr.length < 1) {
-        return 'array not found';
-    }
+// function binaryLastOccurrence(arr, target) {
+//     if (arr.length < 1) {
+//         return 'array not found';
+//     }
 
-    arr.sort((a, b) => a - b);
+//     arr.sort((a, b) => a - b);
 
-    console.log(arr)
+//     console.log(arr)
 
-    let leftIndex = 0;
-    let rightIndex = arr.length - 1;
-    let firstOccurrence = -1;
+//     let leftIndex = 0;
+//     let rightIndex = arr.length - 1;
+//     let firstOccurrence = -1;
 
-    while (leftIndex <= rightIndex) {
-        let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+//     while (leftIndex <= rightIndex) {
+//         let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
 
-        if (arr[middleIndex] === target) {
-            // Update lastOccurrence and continue searching to the right
-            firstOccurrence = middleIndex;
-            rightIndex = middleIndex  -1;
-        } else if (target < arr[middleIndex]) {
-            rightIndex = middleIndex - 1;
-        } else {
-            leftIndex = middleIndex + 1;
-        }
-    }
+//         if (arr[middleIndex] === target) {
+//             // Update lastOccurrence and continue searching to the right
+//             firstOccurrence = middleIndex;
+//             rightIndex = middleIndex  -1;
+//         } else if (target < arr[middleIndex]) {
+//             rightIndex = middleIndex - 1;
+//         } else {
+//             leftIndex = middleIndex + 1;
+//         }
+//     }
 
-    if (firstOccurrence !== -1) {
-        return firstOccurrence;
-    } else {
-        return 'target not found';
-    }
-}
+//     if (firstOccurrence !== -1) {
+//         return firstOccurrence;
+//     } else {
+//         return 'target not found';
+//     }
+// }
 
-console.log(binaryLastOccurrence([2, 32, 3, 432, 2, 332, 3, 43, 445, 65], 2));
+// console.log(binaryLastOccurrence([2, 32, 3, 432, 2, 332, 3, 43, 445, 65], 2));
 
 
