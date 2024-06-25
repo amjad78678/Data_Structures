@@ -67,7 +67,7 @@ class Node{
     }
 }
 
-class doubly{
+class doubly{  
     constructor(){
         this.head=null
         this.tail=null
@@ -156,8 +156,6 @@ const text='arunghosh'
 for(let j=0;j<text.length;j++){
 list.append(text[j])
 }
-
-
 list.reverse()
 list.print()
 console.log(list.getSize());

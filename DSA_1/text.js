@@ -5,13 +5,11 @@
 //    }
 // }
 
-
 // class LinkedList{
 //    constructor(){
 //       this.head=null
 //       this.size=0
 //    }
-
 
 //   isEmpty(){
 //   return this.size===0
@@ -61,7 +59,6 @@
 //    let curr=this.head
 //    let i=0
 
-
 //    while(curr){
 //       if(curr.value===value){
 //          return i
@@ -71,11 +68,10 @@
 //       i++
 //    }
 
-
 // }
 
 // removeFrom(index){
-//  let removedNode; 
+//  let removedNode;
 //    if(this.isEmpty()){
 //       console.log('list is empty man');
 //       return -1
@@ -89,7 +85,7 @@
 //    console.log('invalid index')
 //  }else{
 //    let prev=this.head
-   
+
 //    for(let i=0;i<index-1;i++){
 //       prev=prev.next
 //    }
@@ -117,7 +113,7 @@
 //        return removedNode
 
 //    }else{
-  
+
 //       let prev=this.head
 
 //       while(prev.next && prev.next.value!==value){
@@ -135,7 +131,7 @@
 // }
 
 // insert(value,index){
-    
+
 //    const node=new Node(value)
 //    if(this.isEmpty()){
 //       console.log('List is empty')
@@ -153,15 +149,11 @@
 //         prev=prev.next
 //       }
 
-
-
 // node.next=prev.next
 // prev.next=node
 
 // this.size++
 //    }
-
-  
 
 // }
 // print(){
@@ -180,7 +172,6 @@
 
 // }
 
-
 // const list=new LinkedList()
 
 // list.prepend(300)
@@ -189,14 +180,11 @@
 // list.append(53)
 // list.append(565)
 
-
 // console.log(list.search(300));
 
 // list.insert(10,3)
 // list.print()
-// console.log(list.getSize()); 
-
-
+// console.log(list.getSize());
 
 // function fibonacci(n){
 
@@ -208,7 +196,7 @@
 //    console.log(fibo)
 // }
 
-// console.log(fibonacci(7)); 
+// console.log(fibonacci(7));
 
 // function factorial(n){
 //  let sum=1
@@ -229,14 +217,13 @@
 //       if(n%i==0){
 //          return false
 //       }
-     
+
 //    }
 
 //     return true
 // }
 
-
-// console.log(isPrime(7)) 
+// console.log(isPrime(7))
 
 // function powerTwo(n){
 // if(n<1){
@@ -256,13 +243,12 @@
 
 // }
 
-// console.log(powerTwo(8)) 
-
+// console.log(powerTwo(8))
 
 // function binarySearch(arr,target){
-  
+
 //    for(i=0;i<arr.length;i++){
-      
+
 //       for(j=i+1;j<arr.length;j++){
 //          if(arr[i]>arr[j]){
 //             let temp=arr[i]
@@ -274,12 +260,8 @@
 
 //    console.log(arr)
 
-
-
 //       let leftIndex=0
 //       let rightIndex=arr.length-1
-
-    
 
 // while(rightIndex>=leftIndex){
 //       let middleIndex=Math.floor((leftIndex+rightIndex)/2)
@@ -293,11 +275,10 @@
 //       }
 
 // }
-      
+
 // }
 
-// console.log(binarySearch([1,2,22,3,32,3,22,32,2,35,5,67,7,7,8,8987,54,3],7)) 
-
+// console.log(binarySearch([1,2,22,3,32,3,22,32,2,35,5,67,7,7,8,8987,54,3],7))
 
 // function isPowerTwo(n){
 
@@ -350,7 +331,6 @@
 
 // flattenArray([1, [2, 3, [4, 5]], 6, [7, 8]]);
 
-
 // function flattenArray(arr) {
 //     let res = [];
 
@@ -370,9 +350,8 @@
 
 // flattenArray([1, [2, 3, [4, 5]], 6, [7, 8]]);
 
-
 // function flattenArray(arr){
-   
+
 //    let res=[]
 
 //    function flatten(subArray){
@@ -381,7 +360,7 @@
 //          flatten(subArray[i])
 //       }else{
 //          res.push(subArray[i])
-//       }  
+//       }
 
 //      }
 
@@ -393,24 +372,18 @@
 
 // flattenArray([1, [2, 3, [4, 5]], 6, [7, 8]]);
 
-
-
-
-
 // function binary(arr,target){
 
 //  arr.sort((a,b)=>a-b)
-
 
 //  console.log(arr)
 
 // let leftIndex=0
 // let rightIndex=arr.length-1
 
-
 //    while(rightIndex>=leftIndex){
- 
-//    let middleIndex= Math.floor((leftIndex+rightIndex)/2)   
+
+//    let middleIndex= Math.floor((leftIndex+rightIndex)/2)
 
 //    if(arr[middleIndex]===target){
 //       return middleIndex
@@ -424,10 +397,7 @@
 
 // }
 
-
-// console.log(binary([1,2,3,2,23,21,2,344,3222,44],21)); 
-
-
+// console.log(binary([1,2,3,2,23,21,2,344,3222,44],21));
 
 // class Node{
 //    constructor(value){
@@ -511,7 +481,6 @@
 //       return null
 //    }
 
-
 // }
 
 // reverse(){
@@ -528,7 +497,7 @@
 // }
 
 // search(value){
-   
+
 //    if(this.isEmpty()){
 //       console.log('list is empty')
 //    }
@@ -537,18 +506,18 @@
 //    let i=0
 
 // while(curr){
- 
+
 // if(curr.value===value){
 //    return i
 // }
 // curr=curr.next
 // i++
 // }
-  
+
 // }
 
 //    print(){
-      
+
 //       if(this.isEmpty()){
 //          console.log('list is empty man');
 //       }else{
@@ -564,9 +533,7 @@
 //       }
 //    }
 
-
 // }
-
 
 // const list=new LinkedList()
 
@@ -576,7 +543,7 @@
 // list.prepend(299)
 // list.insert(0,2)
 
-// console.log(list.search(222)) 
+// console.log(list.search(222))
 
 // list.print()
 
@@ -591,7 +558,6 @@
 // }
 // console.log(res)
 
-
 // let str='amjadali'
 // let newStr=''
 
@@ -605,12 +571,10 @@
 
 // console.log(newStr)
 
-
-
 // let arr = [2, 24, 43, 3, 4, 5, 6, 7, 8];
 // let res=[]
 // for(let i=0;i<arr.length;i++){
-   
+
 //    let isPrime=true
 //    if(arr[i]<2){
 //        isPrime=false
@@ -629,7 +593,6 @@
 
 // console.log(res)
 
-
 // let name='arunghosh'
 // let newOne=''
 // for(let i=0;i<name.length;i++){
@@ -639,11 +602,8 @@
 //       newOne=newOne+name[i]
 //    }
 
-
-   
 // }
 // console.log()
-
 
 // class Node{
 //     constructor(value){
@@ -658,19 +618,13 @@
 //         this.size=0
 //     }
 
-
-
-
 // isEmpty(){
 //     return this.size===0
 // }
 
-
-
 // getSize(){
 //     return this.size
 // }
-
 
 //     removeValue(value){
 
@@ -688,7 +642,6 @@
 //         while(prev.next && prev.next.value!==value){
 //             prev=prev.next
 //         }
-        
 
 //         if(prev.next){
 //         removedNode=prev.next
@@ -697,7 +650,7 @@
 //         this.size--
 //         return removedNode.value
 //         }
-    
+
 //         return null
 //     }
 
@@ -719,7 +672,6 @@
 //       this.size++
 //     }
 
-    
 //     print(){
 //      if(this.isEmpty()){
 //         console.log('list is empty');
@@ -731,19 +683,13 @@
 //             listValues=listValues+`${curr.value} `
 //              curr=curr.next
 //         }
-           
+
 //         console.log(listValues)
 
 //      }
 
-
 //     }
 // }
-
-
-
-
-
 
 // const list=new LinkedList()
 
@@ -752,16 +698,14 @@
 // list.append(33)
 // list.append(55)
 
-
 // console.log(list.removeValue(100))
 
 // list.print()
-// console.log(list.getSize()) 
-
+// console.log(list.getSize())
 
 // function countOccurrences(arr,target){
 //     let count=0
-   
+
 //     for(let i=0;i<arr.length;i++){
 //         if(arr[i]===target){
 //             count++
@@ -774,14 +718,12 @@
 
 // console.log(countOccurrences([2, 4, 6, 4, 8, 4, 10, 4, 12], 4)); // Output: 4
 
-
 // const originalArray = [1, 2, 3, 4, 5];
 // const reversedArray = reverseArray(originalArray);
 
-
 // function reverseArray(arr){
 //     for(let i=0;i<arr.length/2;i++){
-        
+
 //         let temp=arr[i]
 //         arr[i]=arr[arr.length-1-i]
 //         arr[arr.length-1-i]=temp
@@ -793,7 +735,6 @@
 
 // console.log(reversedArray); // Output: [5, 4, 3, 2, 1]
 
-
 // function isPalindrome(str){
 
 //    let arr= str.split('')
@@ -801,10 +742,9 @@
 //   let newArr= arr.filter((ar,index)=>ar!==' ')
 
 //    for(let i=0;i<newArr.length/2;i++){
-      
+
 //     let char1=newArr[i].toLowerCase()
 //     let char2=newArr[newArr.length-1-i].toLowerCase()
-
 
 //        if(char1!==char2){
 //         return false
@@ -816,8 +756,6 @@
 //    }
 // console.log(isPalindrome("A man a plan a canal Panama")); // Output: true
 // console.log(isPalindrome("Hello, World!")); // Output: false
-
-
 
 // const numbers = [3, 5, 2, 3, 8, 5, 10, 2];
 
@@ -838,11 +776,8 @@
 //     }
 //     return res
 
-
 // }
 // console.log(removeDuplicates(numbers)); // Output: [3, 5, 2, 8, 10]
-
-
 
 // const sortedArray = [2, 4, 6, 8, 10, 12, 14, 16];
 // const target = 10;
@@ -851,12 +786,10 @@
 
 //     let leftIndex=0
 //     let rightIndex=arr.length-1
-  
-   
 
 //         while(rightIndex>=leftIndex){
 //   let middleIndex=Math.floor((leftIndex+rightIndex)/2)
-        
+
 //         if(arr[middleIndex]===target){
 //             return middleIndex
 //         }
@@ -871,7 +804,6 @@
 // }
 
 // console.log(binarySearch(sortedArray, target)); // Output: 4
-
 
 // const sortedArray = [1, 2, 2, 2, 4, 4, 6, 8, 10];
 // const target = 2;
@@ -902,7 +834,6 @@
 
 // console.log(findFirstOccurrence(sortedArray, target)); // Output: 1
 
-
 // const sortedArray = [1, 2, 2, 2, 4, 4, 6, 8, 10];
 // const target = 2;
 
@@ -932,7 +863,6 @@
 
 // console.log(findLastOccurrence(sortedArray, target)); // Output: 3
 
-
 // function findFirstOccurrence(arr, target) {
 //     let leftIndex = 0;
 //     let rightIndex = arr.length - 1;
@@ -954,7 +884,7 @@
 //     return result;
 // }
 
-// console.log(findFirstOccurrence([1, 2, 2, 2, 4, 4, 6, 8, 10],2)) 
+// console.log(findFirstOccurrence([1, 2, 2, 2, 4, 4, 6, 8, 10],2))
 
 // function findLastOccurrence(arr, target) {
 //     let leftIndex = 0;
@@ -977,8 +907,7 @@
 //     return result;
 // }
 
-// console.log(findLastOccurrence([1, 2, 2, 2, 4, 4, 6, 8, 10],2)) 
-
+// console.log(findLastOccurrence([1, 2, 2, 2, 4, 4, 6, 8, 10],2))
 
 // function factorial(num){
 
@@ -1053,7 +982,7 @@
 //         prev=prev.next
 //         }
 //         prev.next=node
-    
+
 //     }
 //     this.size++
 // }
@@ -1069,14 +998,12 @@
 //     while(curr){
 //         if(curr.value===value){
 
-      
 //             return i
 
 //         }
 //       curr=curr.next
 //         i++
 //     }
-    
 
 // }
 
@@ -1103,11 +1030,10 @@
 //         this.size++
 //     }
 
-
 // }
 
 // reverse(){
-  
+
 //   let curr=this.head
 //   let prev=null
 
@@ -1141,12 +1067,10 @@
 //        removedNode= prev.next
 //        prev.next=removedNode.next
 
-
 //        this.size--
 //        return removedNode.value
 //     }
 // }
-
 
 // removeValue(value){
 
@@ -1161,7 +1085,7 @@
 
 //     this.size--
 //     return value
-    
+
 // }else{
 //  let prev=this.head
 
@@ -1183,7 +1107,6 @@
 
 // }
 
-
 //  print(){
 //     if(this.isEmpty()){
 //         console.log('List is empty')
@@ -1198,9 +1121,7 @@
 //     }
 //  }
 
-
 // }
-
 
 // const list =new LinkedList()
 
@@ -1211,10 +1132,7 @@
 
 // console.log(list.removeValue(55))
 
-
 // list.print()
-
-
 
 // function binary(arr,target){
 
@@ -1230,7 +1148,6 @@
 
 //   let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
 
-
 //     if(target==arr[middleIndex]){
 //         return middleIndex
 //     }
@@ -1242,12 +1159,7 @@
 //        }
 // }
 
-
-// console.log(binary([2,32,3,432,2,332,3,43,445,65],3)) 
-
-
-
-
+// console.log(binary([2,32,3,432,2,332,3,43,445,65],3))
 
 // class Node{
 //     constructor(value){
@@ -1257,7 +1169,6 @@
 //     }
 
 // }
-
 
 //     class LinkedList{
 
@@ -1275,8 +1186,6 @@
 
 //         }
 
-
-
 //         prepend(value){
 
 //             const node =new Node(value)
@@ -1291,13 +1200,11 @@
 //             this.size++
 //         }
 
-
 //                 insert(value,index){
 
 //             if(index<0 && index>=this.size){
 //                 console.log('invalid index')
 //             }
-
 
 //             if(index===0){
 //                 this.prepend(value)
@@ -1305,7 +1212,7 @@
 //                 const node=new Node(value)
 
 //                 let prev=this.head
-        
+
 //                 for(let i=0;i<index-1;i++){
 //                     prev=prev.next
 //                 }
@@ -1330,36 +1237,230 @@
 //         }
 //     }
 
-
 //     const list =new LinkedList()
 
 //     list.prepend(100)
 //     list.insert(10,1)
 //     list.print()
 
-
 // function fibonacci(n){
 
 //     let fibo=[0,1]
 
 //     for(let i=2;i<n;i++){
-     
+
 //         fibo[i]=fibo[i-1]+fibo[i-2]
 //     }
 //     console.log(fibo)
 // }
 // fibonacci(5)
 
-function factorial(n){
+// function factorial(n){
 
-let sum=1
-    for(let i=2;i<=n;i++){
-        sum=sum*i
+// let sum=1
+//     for(let i=2;i<=n;i++){
+//         sum=sum*i
 
-    }
+//     }
 
-    console.log(sum)
+//     console.log(sum)
+// }
+
+// factorial(5)
+
+// function binarySearch(arr, target) {
+//   let startIndex = 0;
+//   let lastIndex = arr.length - 1;
+
+//   while (startIndex < lastIndex) {
+//     let middleIndex = Math.floor((startIndex + lastIndex) / 2);
+//     console.log("middleIndex", middleIndex);
+//     if (arr[middleIndex] === target) {
+//       return middleIndex;
+//     } else if (arr[middleIndex] < target) {
+//       startIndex = middleIndex + 1;
+//     } else {
+//       lastIndex = middleIndex - 1;
+//     }
+//   }
+// }
+
+// console.log(binarySearch([1, 5, 21, 32, 34, 34, 89, 145, 343, 654, 5445], 89));
+
+// function recursiveBinary(arr, target) {
+//   return search(arr, target, 0, arr.length - 1);
+// }
+
+// function search(arr, target, leftIndex, rightIndex) {
+//     let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+//     if (leftIndex > rightIndex) {
+//         return -1;
+//       }
+
+//   if (arr[middleIndex] === target) {
+//     return middleIndex;
+//   } else if (target < arr[middleIndex]) {
+//     return search(arr, target, leftIndex, middleIndex - 1);
+//   } else {
+//     return search(arr, target, middleIndex + 1, rightIndex);
+//   }
+// }
+
+// console.log(
+//   recursiveBinary([1, 5, 21, 32, 34, 34, 89, 145, 343, 654, 5445], 89)
+// );
+
+// class Node {
+//   constructor(value) {
+//     this.value = value;
+//     this.next = null;
+//     this.prev = null;
+//   }
+// }
+
+// class DoublyLinkedList {
+//   constructor() {
+//     this.head = null;
+//     this.tail = null;
+//     this.size = 0;
+//   }
+
+//   isEmpty() {
+//     return this.head === null;
+//   }
+
+//   prepend(num) {
+//     const node = new Node(num);
+//     if (this.isEmpty()) {
+//       this.head = node;
+//       this.tail = node;
+//     } else {
+//       this.head.prev = node;
+//       node.next = this.head;
+//       this.head = node;
+//     }
+//     this.size++;
+//   }
+
+//   append(num) {
+//     const node = new Node(num);
+
+//     if (this.isEmpty()) {
+//       this.head = node;
+//       this.tail = node;
+//     } else {
+//       this.tail.next = node;
+//       node.prev = this.tail;
+//       this.tail = node;
+//     }
+//     this.size++;
+//   }
+
+//   reverse() {
+//     let curr = this.head;
+//     console.log("iam curr next", curr.next);
+//     let prev = null;
+
+//     while (curr) {
+//       let next = curr.next;
+//       curr.next = prev;
+//       prev = curr;
+//       curr = next;
+//     }
+//     this.head = prev;
+//   }
+
+//   print() {
+//     let curr = this.head;
+//     console.log("curr", curr);
+//     let val = "";
+//     while (curr) {
+//       val += curr.value + " ";
+//       curr = curr.next;
+//     }
+//     console.log("Printing values: ", val);
+//   }
+// }
+
+// const list = new DoublyLinkedList();
+// list.prepend(10);
+// list.prepend(34);
+// list.prepend(54);
+// list.append(12);
+// list.append(11);
+// let name = "amjadali";
+// for (let i = 0; i < name.length; i++) {
+//   list.prepend(name[i]);
+// }
+// list.reverse();
+// list.print();
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
 
-factorial(5)
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  prepend(num) {
+    const node = new Node(num);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+    this.size++;
+  }
+
+  append(num) {
+    const node = new Node(num);
+
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = null;
+      let curr = this.head
+      while (curr.next) {
+        prev = curr.next;
+        curr = curr.next;
+      }
+
+      prev.next = node
+      
+    }
+    this.size++
+  }
+
+  print() {
+    let curr = this.head;
+    let val = "";
+    while (curr) {
+      val += " " + curr.value;
+
+      curr = curr.next;
+    }
+
+    console.log(val);
+  }
+}
+
+const list = new LinkedList();
+list.prepend(12);
+list.prepend(45);
+list.prepend(15);
+list.prepend(546);
+list.append(1)
+list.append(2)
+list.append(3)
+list.print();

@@ -28,7 +28,7 @@
 // console.log(binary([1,44,33,23,355,644,33,533,53577,7],23))
 
 function binary(arr, target) {
-  arr.sort((a, b) => a - b);
+  arr.sort((a, b) => a - b); 
 
   return search(arr, target, 0, arr.length - 1);
 }
