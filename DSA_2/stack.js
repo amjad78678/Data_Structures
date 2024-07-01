@@ -1,8 +1,8 @@
 // class Stack{
-            
+
 //     constructor(){
 //        this.stack=[]
-    
+
 //     }
 
 //     isEmpty(){
@@ -12,8 +12,7 @@
 //         return this.stack.length
 //     }
 //     push(element){
- 
-       
+
 //         this.stack.push(element)
 //     }
 
@@ -31,11 +30,9 @@
 //       return this.stack[this.getSize()-1]
 //     }
 
-
 //     print(){
 //        console.log( this.stack.toString())
 //     }
-
 
 // }
 
@@ -49,7 +46,6 @@
 // stack.pop()
 // console.log(stack.peek());
 // stack.print()
-
 
 class Stack {
   constructor() {
@@ -67,31 +63,31 @@ class Stack {
 
   push(element) {
     this.items[this.size] = element;
-    this.size++
+    this.size++;
   }
 
   pop() {
     if (this.isEmpty()) {
       return undefined;
     }
-    let removedItem=this.items[this.size-1]
-    delete this.items[this.size-1]
+    let removedItem = this.items[this.size - 1];
+    delete this.items[this.size - 1];
     this.size -= 1;
-    return removedItem
+    return removedItem;
   }
 
   peak() {
     if (this.isEmpty()) {
-      console.log('empty');
+      console.log("empty");
     } else {
       console.log(this.items[this.size - 1]);
     }
   }
 
   print() {
-    let str = '';
+    let str = "";
     for (let i = 0; i < this.size; i++) {
-      str += this.items[i] + ' ';
+      str += this.items[i] + " ";
     }
 
     console.log(str);
@@ -105,9 +101,7 @@ stack.push(12);
 stack.push(13);
 stack.push(23);
 stack.push(43);
- stack.pop()
+stack.pop();
 
-stack.peak()
+stack.peak();
 stack.print();
-
-

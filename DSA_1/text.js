@@ -1430,18 +1430,68 @@ class LinkedList {
       this.head = node;
     } else {
       let prev = null;
-      let curr = this.head
+      let curr = this.head;
       while (curr.next) {
         prev = curr.next;
         curr = curr.next;
       }
 
-      prev.next = node
-      
+      prev.next = node;
     }
-    this.size++
+    this.size++;
   }
 
+  insert(val, index) {
+    const node = new Node(val);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+
+      let next = prev.next;
+      prev.next = node;
+      node.next = next;
+    }
+
+    this.size++;
+  }
+  removeValueWithIndex(index) {
+    if (this.isEmpty()) {
+      console.log("Man you cant remove things from empty ground");
+    } else {
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      let removedNode = prev.next
+      prev.next = removedNode.next
+      this.size--
+      return removedNode.value
+    }
+  }
+
+  removeValue(val){
+
+    if(this.isEmpty()){
+      console.log('You cant remove anything from empty ground')
+
+    }else{
+     
+    let prev = this.head
+
+     while(prev.next.value !== val){
+       prev = prev.next
+     }
+     console.log('iam curr',prev)
+     let removedNode = prev.next
+     prev.next =removedNode.next
+     this.size--
+     return removedNode.value
+    }
+  }
   print() {
     let curr = this.head;
     let val = "";
@@ -1460,7 +1510,10 @@ list.prepend(12);
 list.prepend(45);
 list.prepend(15);
 list.prepend(546);
-list.append(1)
-list.append(2)
-list.append(3)
+list.append(1);
+list.append(2);
+list.append(3);
+list.insert(23, 2);
+list.removeValueWithIndex(4);
+list.removeValue(2)
 list.print();

@@ -109,13 +109,11 @@ class Queue {
 }
 
 const queue = new Queue();
-
 queue.enqueue(34);
 queue.enqueue(763);
 queue.enqueue(45);
 
 console.log(queue.dequeue());
-
 console.log(queue.dequeue());
 console.log(queue.peek());
 

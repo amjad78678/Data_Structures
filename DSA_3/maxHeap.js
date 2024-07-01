@@ -72,7 +72,6 @@ class Heap {
 }
 
 const heap = new Heap();
-
 console.log(heap);
 
 heap.push(56);

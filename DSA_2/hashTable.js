@@ -104,7 +104,6 @@ class hashTable {
   remove(key) {
     const index = this.hash(key);
     // this.table[index] = undefined;
-
     const bucket = this.table[index];
 
     if (bucket) {
@@ -131,7 +130,6 @@ table.set("name", "amjad");
 table.set("mane", "ammu");
 table.set("age", 18);
 table.display();
-
 table.set("place", "omanoor");
 table.set("address", "thattankandiyil");
 

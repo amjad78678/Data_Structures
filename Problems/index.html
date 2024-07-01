@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="middle">
+        <button id="inner">Click Me</button>
+      </div>
+    </div>
+
+    <script>
+      // Registering event listeners for capturing
+      document.getElementById("outer").addEventListener(
+        "click",
+        function (event) {
+          alert("Outer div clicked!");
+        },
+        true
+      ); // Third parameter set to true for capturing
+
+      document.getElementById("middle").addEventListener(
+        "click",
+        function (event) {
+          alert("Middle div clicked!");
+        },
+      ); // Third parameter set to true for capturing
+
+      document.getElementById("inner").addEventListener(
+        "click",
+        function (event) {
+          alert("Inner button clicked!");
+          event.stopPropagation()
+        },
+        true
+      ); // Third parameter set to true for capturing
+    </script>
+  </body>
+</html>

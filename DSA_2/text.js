@@ -2938,129 +2938,124 @@
 
 // console.log(insertionSort([3, 2, 3, 45, 6, 7, 8, 9, 5, 4443]));
 
-     
+//    class HashTable {
+//      constructor(size) {
+//        this.table = new Array(size);
+//        this.size = size;
+//      }
 
-   // class HashTable {
-   //   constructor(size) {
-   //     this.table = new Array(size);
-   //     this.size = size;
-   //   }
+//      hash(key) {
+//        let total = 0;
+//        for (let i = 0; i < key.length; i++) {
+//          total = total + key.charCodeAt(i);
+//        }
 
-   //   hash(key) {
-   //     let total = 0;
-   //     for (let i = 0; i < key.length; i++) {
-   //       total = total + key.charCodeAt(i);
-   //     }
+//        console.log('iam hash', total);
+//        return total % this.size;
+//      }
 
-   //     console.log('iam hash', total);
-   //     return total % this.size;
-   //   }
+//      set(key, value) {
+//        const index = this.hash(key);
 
-   //   set(key, value) {
-   //     const index = this.hash(key);
+//        const bucket = this.table[index];
 
-   //     const bucket = this.table[index];
+//        if (!bucket) {
+//          this.table[index] = [[key, value]];
+//        } else {
+//          const sameKeyItem = bucket.find((item) => item[0] === key);
 
-   //     if (!bucket) {
-   //       this.table[index] = [[key, value]];
-   //     } else {
-   //       const sameKeyItem = bucket.find((item) => item[0] === key);
+//          if (sameKeyItem) {
+//            sameKeyItem[1] = value;
+//          } else {
+//            bucket.push([key, value]);
+//          }
+//        }
+//      }
 
-   //       if (sameKeyItem) {
-   //         sameKeyItem[1] = value;
-   //       } else {
-   //         bucket.push([key, value]);
-   //       }
-   //     }
-   //   }
+//      get(key) {
+//        const index = this.hash(key);
 
-   //   get(key) {
-   //     const index = this.hash(key);
+//        const bucket = this.table[index];
 
-   //     const bucket = this.table[index];
+//        if (!bucket) {
+//          console.log('the key not found');
+//        } else {
+//          const sameKeyItem = bucket.find((item) => item[0] === key);
 
-   //     if (!bucket) {
-   //       console.log('the key not found');
-   //     } else {
-   //       const sameKeyItem = bucket.find((item) => item[0] === key);
+//          if (sameKeyItem) {
+//            return sameKeyItem[1];
+//          }
+//        }
+//      }
 
-   //       if (sameKeyItem) {
-   //         return sameKeyItem[1];
-   //       }
-   //     }
-   //   }
+//      remove(key) {
+//        const index = this.hash(key);
 
-   //   remove(key) {
-   //     const index = this.hash(key);
+//        const bucket = this.table[index];
 
-   //     const bucket = this.table[index];
+//        if (!bucket) {
+//          console.log('the key not found');
+//        } else {
+//          const sameKeyItem = bucket.find((item) => item[0] === key);
 
-   //     if (!bucket) {
-   //       console.log('the key not found');
-   //     } else {
-   //       const sameKeyItem = bucket.find((item) => item[0] === key);
+//          if (sameKeyItem) {
+//            let removedItem = sameKeyItem[1];
+//            bucket.splice(bucket.indexOf(sameKeyItem), 1);
 
-   //       if (sameKeyItem) {
-   //         let removedItem = sameKeyItem[1];
-   //         bucket.splice(bucket.indexOf(sameKeyItem), 1);
+//            return removedItem;
+//          }
+//        }
+//      }
 
-   //         return removedItem;
-   //       }
-   //     }
-   //   }
+//      isKey(key) {
+//        const index = this.hash(key);
 
-   //   isKey(key) {
-   //     const index = this.hash(key);
+//        const bucket = this.table[index];
 
-   //     const bucket = this.table[index];
+//        if (!bucket) {
+//          return false;
+//        } else {
+//          const sameKeyItem = bucket.find((item) => item[0] === key);
+//          if (sameKeyItem) {
+//            return true;
+//          } else {
+//            return false;
+//          }
+//        }
+//      }
 
-   //     if (!bucket) {
-   //       return false;
-   //     } else {
-   //       const sameKeyItem = bucket.find((item) => item[0] === key);
-   //       if (sameKeyItem) {
-   //         return true;
-   //       } else {
-   //         return false;
-   //       }
-   //     }
-   //   }
+//      isValue(value) {
+//        for (let i = 0; i < this.size; i++) {
+//          const bucket = this.table[i];
+//          if (bucket) {
+//            const sameValue = bucket.find((item) => item[1] === value);
+//            if (sameValue) {
+//              return true;
+//            }
+//          }
+//        }
+//        return false;
+//      }
 
-   //   isValue(value) {
-   //     for (let i = 0; i < this.size; i++) {
-   //       const bucket = this.table[i];
-   //       if (bucket) {
-   //         const sameValue = bucket.find((item) => item[1] === value);
-   //         if (sameValue) {
-   //           return true;
-   //         }
-   //       }
-   //     }
-   //     return false;
-   //   }
+//      print() {
+//        for (let i = 0; i < this.size; i++) {
+//          if (this.table[i]) {
+//            console.log(i, this.table[i]);
+//          }
+//        }
+//      }
+//    }
 
-   //   print() {
-   //     for (let i = 0; i < this.size; i++) {
-   //       if (this.table[i]) {
-   //         console.log(i, this.table[i]);
-   //       }
-   //     }
-   //   }
-   // }
+//    const table=new HashTable(50)
+//    table.set('name',"amjadali")
+//    table.set('age',18)
 
-   // const table=new HashTable(50)
-   // table.set('name',"amjadali")
-   // table.set('age',18)
+//    console.log(table.get('age'));
+//    table.print()
 
-   // console.log(table.get('age'));
-   // table.print()
+//    console.log(table.isKey('mane'));
 
-
-   
-   // console.log(table.isKey('mane')); 
-
-   // console.log(table.isValue('amjadali'))
-
+//    console.log(table.isValue('amjadali'))
 
 //    class Node{
 //       constructor(value){
@@ -3072,7 +3067,7 @@
 //    }
 //    class queueLinkedList{
 //       constructor(){
-    
+
 //          this.head=null
 //          this.tail=null
 //          this.size=0
@@ -3129,14 +3124,14 @@
 //     curr = next;
 //          }
 
-//          this.head=prev 
+//          this.head=prev
 //       }
 
 //       print(){
 //          let curr=this.head
 //          let listValues=''
 //          while(curr){
-            
+
 //            listValues=listValues+`${curr.value} `
 //            curr=curr.next
 //          }
@@ -3147,124 +3142,111 @@
 
 //    const queue=new queueLinkedList()
 
-
 // let str='amjadali'
 
 //  for(let i=0;i<str.length;i++){
 //       queue.enqueue(str[i])
 //  }
 
-
-
-
 //    queue.reverse()
 //    queue.print()
 
+//    function selectionSort(arr){
 
-   // function selectionSort(arr){
+//           for(let i=0;i<arr.length;i++){
+//             let temp=i
 
-   //        for(let i=0;i<arr.length;i++){
-   //          let temp=i
+//             for(let j=i+1;j<arr.length;j++){
+//                if(arr[j]<arr[temp]){
+//                   temp=j
+//                }
+//             }
 
-   //          for(let j=i+1;j<arr.length;j++){
-   //             if(arr[j]<arr[temp]){
-   //                temp=j
-   //             }
-   //          }
+//             let bot =arr[i]
+//             arr[i]=arr[temp]
+//             arr[temp]=bot
+//           }
+//           return arr
+//    }
 
-   //          let bot =arr[i]
-   //          arr[i]=arr[temp]
-   //          arr[temp]=bot
-   //        }
-   //        return arr
-   // }
+//    function quickSort(arr,low=0,high=arr.length-1){
 
+//         if(low<high){
+//           let partition=Partition(arr,low,high)
 
-   // function quickSort(arr,low=0,high=arr.length-1){
+//            quickSort(arr,low,partition-1)
+//            quickSort(arr,partition+1,high)
 
-   //      if(low<high){
-   //        let partition=Partition(arr,low,high)
+//         }
 
-   //         quickSort(arr,low,partition-1)
-   //         quickSort(arr,partition+1,high)
+//         return arr
+//    }
 
-   //      }
+//    function Partition(arr,low,high){
 
-   //      return arr
-   // }
+//        let pivot=arr[high]
+//        let i=low-1
 
-   // function Partition(arr,low,high){
+//        for(let j=low;j<high;j++){
+//          if(arr[j]<pivot){
+//             i++
+//           [arr[j],arr[i]]=[arr[i],arr[j]]
+//          }
+//        }
 
-   //     let pivot=arr[high]
-   //     let i=low-1
+//       [arr[i+1],arr[high]=arr[high],arr[i+1]]
 
-   //     for(let j=low;j<high;j++){
-   //       if(arr[j]<pivot){
-   //          i++
-   //        [arr[j],arr[i]]=[arr[i],arr[j]]
-   //       }
-   //     }
+//       return i+1
+//    }
 
-   //    [arr[i+1],arr[high]=arr[high],arr[i+1]]
+//    function mergeSort(arr){
 
-   //    return i+1
-   // }
+//        if(arr.length<2){
+//      return arr
+//        }
 
+//        let mid=Math.floor(arr.length/2)
+//        let left = mergeSort(arr.slice(0, mid));
+//        let right = mergeSort(arr.slice(mid));
 
-   // function mergeSort(arr){
+//        return Merge(left,right)
+//    }
 
-   //     if(arr.length<2){
-   //   return arr
-   //     }
+//    function Merge(left,right){
 
-   //     let mid=Math.floor(arr.length/2)
-   //     let left = mergeSort(arr.slice(0, mid)); 
-   //     let right = mergeSort(arr.slice(mid));
+//       let sortedArr=[]
+//       while(left.length && right.length){
 
-   //     return Merge(left,right)
-   // }
+//           if(left[0]<right[0]){
+//            sortedArr.push(left.shift())
+//           }else{
+//             sortedArr.push(right.shift())
+//           }
+//       }
 
-   // function Merge(left,right){
- 
-   //    let sortedArr=[]
-   //    while(left.length && right.length){
+//       return [...sortedArr,...left,...right]
+//    }
 
-   //        if(left[0]<right[0]){
-   //         sortedArr.push(left.shift())
-   //        }else{
-   //          sortedArr.push(right.shift())
-   //        }
-   //    }
+//    function insertionSort(arr){
 
-   //    return [...sortedArr,...left,...right]
-   // }
+//       for(let i=1;i<arr.length;i++){
+//          let numberToInsert=arr[i]
+//           let j=i-1
+//           while(j>=0 && arr[j]>numberToInsert){
 
+//              arr[j+1]=arr[j]
 
+//              j--
+//           }
 
+//           arr[j + 1] = numberToInsert;
+//       }
 
+//       return arr
 
-   // function insertionSort(arr){
+//    }
 
-   //    for(let i=1;i<arr.length;i++){
-   //       let numberToInsert=arr[i]
-   //        let j=i-1
-   //        while(j>=0 && arr[j]>numberToInsert){
-
-   //           arr[j+1]=arr[j]
-
-   //           j--
-   //        }
-
-   //        arr[j + 1] = numberToInsert;
-   //    }
-
-   //    return arr
-
-   // }
-
-
-   // console.log(insertionSort([2, 3, 4, 56, 76, 75, 4, 33, 345]));  
-
+//    console.log(insertionSort([2, 3, 4, 56, 76, 75, 4, 33, 345]));
 
 //    class Stack{
 //       constructor(){
@@ -3272,7 +3254,6 @@
 //          this.stack=[]
 //          this.size=0
 //       }
-
 
 //       push(value){
 
@@ -3295,7 +3276,7 @@
 
 //        return removedItem;
 //          }
- 
+
 //       }
 
 //       peek(){
@@ -3312,17 +3293,14 @@
 // }
 // console.log(listValues);
 //          }
-  
-//       }
 
+//       }
 
 //    }
 
 //    const stack=new Stack()
 
-
 //    console.log(stack.pop());
-
 
 //    stack.print()
 
@@ -3338,10 +3316,8 @@
 //      }
 // enqueue(value){
 
-
 //    this.queue[this.back]=value
 //    this.back++
-   
 
 // }
 // dequeue(){
@@ -3385,93 +3361,453 @@
 // console.log(queue.getSize());
 // queue.print()
 
+// function mergeSort(arr){
 
-function mergeSort(arr){
+//    if(arr.length<2){
+//       return arr
+//    }
+//    let mid=Math.floor(arr.length/2)
 
-   if(arr.length<2){
-      return arr
-   }
-   let mid=Math.floor(arr.length/2)
+//     let left=mergeSort(arr.slice(0,mid))
+//     let right=mergeSort(arr.slice(mid))
 
-    let left=mergeSort(arr.slice(0,mid))
-    let right=mergeSort(arr.slice(mid))
+//     return merge(left,right)
 
-    return merge(left,right)
+// }
 
+// function merge(left,right){
+
+//    let sortedArr=[]
+//    while(left.length && right.length){
+
+//       if(left[0]<right[0]){
+//          sortedArr.push(left.shift())
+//       }else{
+//          sortedArr.push(right.shift())
+//       }
+//    }
+
+//    return [...sortedArr,...left,...right]
+
+// }
+
+//   function quickSort(arr,low=0,high=arr.length-1){
+
+//       if(low<high){
+
+//          let partition=Partition(arr,low,high)
+
+//           quickSort(arr,low,partition-1)
+//           quickSort(arr,partition+1,high)
+//       }
+
+//       return arr
+//   }
+
+//   function Partition(arr,low,high){
+
+//       let pivot=arr[high]
+//       let i=low-1
+
+//       for(let j=low;j<high;j++){
+//          if(arr[j]<pivot){
+
+//             i++
+
+//             [arr[j],arr[i]]=[arr[i],arr[j]]
+
+//          }
+//       }
+
+//       [arr[i+1],arr[high]]=[arr[high],arr[i+1]]
+
+//       return i+1
+//   }
+
+//   function insertionSort(arr){
+
+//      for(let i=1;i<arr.length;i++){
+//       let numberToInsert=arr[i]
+//        let j=i-1
+
+//        while(j>=0 && arr[j]>numberToInsert){
+
+//           arr[j+1]=arr[j]
+
+//           j--
+//        }
+
+//        arr[j+1]=numberToInsert
+
+//      }
+//      return arr
+//   }
+//    console.log(insertionSort([3, 43, 45, 4, 356, 75, 5]));
+
+// function bubbleSort(arr) {
+//   let changed = false;
+//   do {
+//     changed = false;
+//     for (let i = 0; i < arr.length - 1; i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         let temp = arr[i];
+//         arr[i] = arr[i + 1];
+//         arr[i + 1] = temp;
+//         changed = true;
+//       }
+//     }
+//   } while (changed);
+
+//   console.log(arr);
+// }
+
+// bubbleSort([12, 23, 3, 44, 32, 23444, 4]);
+
+// function insertionSort(){
+
+// }
+
+// class Queue {
+
+//     constructor(){
+//         this.arr=[]
+//     }
+
+//  enqueue(val){
+//     this.arr.unshift(val)
+//  }
+
+//  dequeue(){
+//    let popped= this.arr.pop()
+//    return popped
+
+//  }
+
+//  peek(){
+//    console.log(this.arr[this.arr.length-1])
+//  }
+
+//  print(){
+//     let listValues = ''
+//     for(let i =0 ;i<this.arr.length;i++){
+//         listValues = listValues+ ' '+this.arr[i]
+//     }
+//     console.log(listValues)
+//  }
+// }
+
+// const queue = new Queue()
+
+// queue.enqueue(12)
+// queue.enqueue(34)
+// queue.enqueue(54)
+// // console.log(queue.dequeue())
+// queue.peek()
+// queue.print()
+
+// function fibonacci(num){
+
+//     let arr = [0,1]
+
+//     for(let i=2;i<=num;i++){
+//     arr[i] = arr[i-1]+arr[i-2]
+//     }
+
+//    console.log(arr)
+
+// }
+
+// fibonacci(12)
+
+// function factorial(num){
+//    let sum = 1
+//     for(let i=1;i<=num;i++){
+//          sum = sum * i
+//     }
+//     console.log(sum)
+// }
+
+// factorial(5)
+
+// function powerTwo(num){
+//   let sum = 1
+//   for(let i=1;i<=num;i++){
+//     sum = sum * 2
+//   }
+//   console.log(sum)
+// }
+
+// powerTwo(4)
+
+// class HashTable {
+//   constructor(size) {
+//     this.table = new Array(size);
+//     this.size = size;
+//   }
+
+//   hash(key) {
+//     let total = 0;
+//     for (let i = 0; i < key.length; i++) {
+//       total += key.charCodeAt();
+//     }
+
+//     return total % this.size;
+//   }
+
+//   add(key, value) {
+//     const index = this.hash(key);
+//     console.log("ind", index);
+//     const bucket = this.table[index];
+
+//     if (!bucket) {
+//       this.table[index] = [[key, value]];
+//     } else {
+//       const sameKeyItem = bucket.find((val) => val[0] === key);
+
+//       if (sameKeyItem) {
+//         sameKeyItem[1] = value;
+//       } else {
+//         bucket.push([key, value]);
+//       }
+//     }
+//   }
+
+//   get(key){
+// const index = this.hash(key)
+// const bucket = this.table[index]
+//  if(!bucket){
+//  console.log('There is no such data')
+//  }else{
+//   const sameKeyItem = bucket.find((val)=>val[0]===key)
+//   if(sameKeyItem){
+//     return sameKeyItem[1]
+//   }else{
+//     return 'doesnt have any such '
+//   }
+//  }
+
+//   }
+
+//   print() {
+//     console.log(this.table);
+//   }
+// }
+
+// const table = new HashTable(50);
+// table.add("name", "Mohammed amjad ali");
+// table.add("nami", "ali");
+// console.log(table.get('nami'))
+// table.print();
+
+// function insertionSort(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     let nti = arr[i];
+
+//     let j = i - 1;
+
+//     while (j >= 0 && arr[j] > nti) {
+//       arr[j + 1] = arr[j];
+//       j--;
+//     }
+//     arr[j + 1] = nti;
+//   }
+//   console.log(arr);
+// }
+
+// insertionSort([12, 2, 4, 35, 2, 245, 46, 43]);
+
+// function selectionSort(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     let smallest = i;
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[j] < arr[smallest]) {
+//         smallest = j;
+//       }
+//     }
+
+//     console.log('iam small index',smallest)
+//     // arr[i] = arr[smallest];
+//     // instead of giving directly into the some index we need to swap them because either it will duplicate you get idea
+
+//     let temp = arr[i]
+//     arr[i]=arr[smallest]
+//     arr[smallest]=temp
+
+//   }
+//  console.log(arr)
+// }
+
+// selectionSort([12, 2, 4, 35, 245, 46, 43]);
+
+// function mergeSort(arr) {
+
+//   if(arr.length <= 1){
+//     return arr
+//   }
+//   let middleIndex = Math.floor(arr.length / 2);
+
+//   let left = mergeSort(arr.slice(0, middleIndex));
+//   let right = mergeSort(arr.slice(middleIndex));
+
+//   return merge(left, right);
+// }
+
+// function merge(left,right){
+//   let sortedArr=[]
+
+//   while(left.length && right.length){
+
+//     if(left[0]<right[0]){
+//       sortedArr.push(left.shift())
+//     }else{
+//       sortedArr.push(right.shift())
+//     }
+//   }
+
+//   return [...sortedArr,...left,...right]
+// }
+
+// console.log(mergeSort([12, 2, 4, 35, 245, 46, 43]))
+
+// function quickSort(arr) {
+//   if (arr.length <= 1) {
+//     return arr;
+//   }
+//   let pivot = arr[arr.length - 1];
+//   let leftArr = [];
+//   let rightArr = [];
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] < pivot) {
+//       leftArr.push(arr[i]);
+//     } else {
+//       rightArr.push(arr[i]);
+//     }
+//   }
+
+//   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+// }
+
+// console.log(quickSort([12, 2, 4, 35, 245, 46, 43]));
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 
-function merge(left,right){
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
 
-   let sortedArr=[]
-   while(left.length && right.length){
+  isEmpty() {
+    return this.size === 0;
+  }
 
-      if(left[0]<right[0]){
-         sortedArr.push(left.shift())
-      }else{
-         sortedArr.push(right.shift())
+  prepend(value) {
+    const node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+    this.size++;
+  }
+  append(value) {
+    const node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = this.head;
+      console.log("iam prev in append", prev);
+      while (prev.next) {
+        prev = prev.next;
       }
-   }
 
-   return [...sortedArr,...left,...right]
+      prev.next = node;
+    }
+    this.size++;
+  }
+  removeMiddleVal() {
+    let middIndex = Math.floor(this.size / 2);
+    console.log("midInd", middIndex);
 
+    let prev = this.head;
+    for (let i = 0; i < middIndex - 1; i++) {
+      prev = prev.next;
+    }
+    const removedNode = prev.next;
+    prev.next = removedNode.next;
+    this.size--;
+    console.log("removedNode", removedNode.value);
+  }
+
+  backingIthRemove(value) {
+    let prev = this.head;
+
+    for (let i = 0; i < this.size - value - 1; i++) {
+      prev = prev.next;
+    }
+
+    let removedNode = prev.next;
+    prev.next = removedNode.next;
+
+    console.log("removed", removedNode.value);
+  }
+
+  print() {
+    let listValues = "";
+    let curr = this.head;
+    while (curr) {
+      listValues += " " + curr.value;
+      curr = curr.next;
+    }
+    console.log(listValues);
+  }
 }
 
+const list = new LinkedList();
+list.append(23);
+list.append(232);
+list.append(2);
+list.append(3);
+list.append(5);
+list.append(8);
+// list.print();
 
+const list2 = new LinkedList();
+list2.append(35);
+list2.append(456);
+list2.append(7);
+list2.append(3);
+list2.append(5);
 
-  function quickSort(arr,low=0,high=arr.length-1){
+function mergeLinkedList(list1, list2) {
+  //head find after we need to give
+  let mergedHead = list1.head;
 
-
-      if(low<high){
-
-         let partition=Partition(arr,low,high)
-
-          quickSort(arr,low,partition-1)
-          quickSort(arr,partition+1,high)
-      }
-
-      return arr
+  let prev = list1.head;
+  //find first list tail
+  while (prev.next) {
+    prev = prev.next;
   }
+  console.log("iam prev", prev);
+  prev.next = list2.head;
 
-  function Partition(arr,low,high){
+  const mergedList = new LinkedList();
+  mergedList.head = mergedHead;
+  mergedList.size = list1.size + list2.size;
 
-      let pivot=arr[high]
-      let i=low-1
+  return mergedList;
+}
 
-      for(let j=low;j<high;j++){
-         if(arr[j]<pivot){
+const merged = mergeLinkedList(list, list2);
+merged.print();
 
-            i++
-
-            [arr[j],arr[i]]=[arr[i],arr[j]]
-
-
-         }
-      }
-
-      [arr[i+1],arr[high]]=[arr[high],arr[i+1]]
-
-      return i+1
-  }
-
-
-
-
-  function insertionSort(arr){
-
-     for(let i=1;i<arr.length;i++){
-      let numberToInsert=arr[i]
-       let j=i-1
-
-       while(j>=0 && arr[j]>numberToInsert){
-
-          arr[j+1]=arr[j]
-
-          j--
-       }
-
-       arr[j+1]=numberToInsert
-
-     }
-     return arr
-  }
-   console.log(insertionSort([3, 43, 45, 4, 356, 75, 5])); 
+// list.removeMiddleVal();
+// list.backingIthRemove(3)
+// list.print();

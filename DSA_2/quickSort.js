@@ -1,5 +1,5 @@
 // function quickSort(arr) {
-//   if (arr.length < 2) {
+//   if (arr.length <= 1) {
 //     return arr;
 //   }
 
